@@ -8,11 +8,13 @@ router.post("/signup", async (req, res, next) => {
     const { body } = req;
     const salt = bcrypt.genSaltSync(10);
     const password = bcrypt.hashSync(body.newPassword, salt);
-    const username = body.newUsername;
+    const email = body.newEmail;
+    const name = body.newName;
     const campus = body.newCampus;
     const course = body.newCourse;
     const result = await User.create({
-      username,
+      email,
+      name,
       password,
       campus,
       course
@@ -25,11 +27,11 @@ router.post("/signup", async (req, res, next) => {
 //login
 router.post("/login", async (req, res, next) => {
   try {
-    const { username, password } = req.body;
-    const user = await User.findOne({ username });
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
     if (!user) {
       res.json({
-        message: "username not found,please check and try again!",
+        message: "email not found,please check and try again!",
         code: 1
       });
       return;

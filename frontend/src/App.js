@@ -1,17 +1,9 @@
-
-// import logo from './logo.svg';
-import './App.css';
-import { Route,Switch } from "react-router-dom"
-import React, { Component } from 'react'
-import NavBar from './Components/NavBar'
-import Stats from "./Components/stats"
-import "./images/logo-ironhack.png"
-import About from "./Components/About"
-import Home from "./Components/Home"
-import Archive from './Components/Archive'
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
+import "./images/logo-ironhack.png";
 import axios from "axios";
-import Signup from "./Components/Signup"
-
+import { About, Home, NavBar, Signup } from "./components";
 
 export default class App extends Component {
   state = {

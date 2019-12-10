@@ -3,7 +3,8 @@ import axios from "axios";
 
 class Signup extends Component {
   state = {
-    newUsername: "",
+    newEmail: "",
+    newName: "",
     newPassword: "",
     newCampus: "",
     newCourse: ""
@@ -32,7 +33,7 @@ class Signup extends Component {
 
   goToLogin = () => {
     const { history } = this.props;
-    history.push("/content/login");
+    history.push("/home");
   };
 
   submitInput = async e => {
@@ -41,7 +42,8 @@ class Signup extends Component {
     await axios.post(
       "http://localhost:5000/api/signup",
       {
-        newUsername: this.state.newUsername,
+        newEmail: this.state.newEmail,
+        newName: this.state.newName,
         newPassword: this.state.newPassword,
         newCampus: this.state.newCampus,
         newCourse: this.state.newCourse
@@ -51,7 +53,8 @@ class Signup extends Component {
       }
     );
     this.setState({
-      newUsername: "",
+      newEmail: "",
+      newName: "",
       newPassword: "",
       newCampus: "Please Select a Campus",
       newCourse: "Please Select a Course"
@@ -64,12 +67,19 @@ class Signup extends Component {
       <div>
         <h3> Sign up </h3>
         <form onSubmit={this.submitInput}>
-          <p>Username</p>
+          <p>Email</p>
           <input
             type="text"
             onChange={this.updateInput}
-            name="newUsername"
-            value={this.state.newUsername}
+            name="newEmail"
+            value={this.state.newEmail}
+          />
+          <p>Name</p>
+          <input
+            type="text"
+            onChange={this.updateInput}
+            name="newName"
+            value={this.state.newName}
           />
 
           <p>Password</p>
