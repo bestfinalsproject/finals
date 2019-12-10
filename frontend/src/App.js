@@ -8,6 +8,9 @@ import {Nav} from 'react-bootstrap'
 import "./images/logo-ironhack.png"
 import About from "./Components/About"
 import Home from "./Components/Home"
+import Archive from "./Components/Archive"
+import Stats from "./Components/stats"
+
 
 export default class App extends Component {
   render() {
@@ -40,7 +43,8 @@ export default class App extends Component {
     <Switch>
           <Route path= "/about" component={About}/>
           <Route path= "/home" component={Home}/>
-         
+          <Route path= "/archive" component={Archive}/>
+          <Route path = "/stats" components ={Stats}/>
           </Switch>
         
       </div>

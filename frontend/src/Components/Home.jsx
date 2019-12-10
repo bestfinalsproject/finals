@@ -4,7 +4,7 @@ import './home.css'
 export default class Landing extends Component {
 
     notify=()=>{
-        window.alert("This feature isn't working right now, stay posted for future updates!")
+        //window.alert("This feature isn't working right now, stay posted for future updates!")
     }
     render() {
         return (
