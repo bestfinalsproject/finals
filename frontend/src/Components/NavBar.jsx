@@ -15,7 +15,7 @@ const NavBar = () => {
             height="30"
             className="d-inline-block align-top"
           />
-          The Forge
+          Bananafish
         </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="about">About</Nav.Link>
