@@ -3,13 +3,14 @@
 import './App.css';
 import { Route,Switch } from "react-router-dom"
 import React, { Component } from 'react'
-import Navbar from 'react-bootstrap/Navbar'
-import {Nav} from 'react-bootstrap'
+import NavBar from './Components/NavBar'
+import Stats from "./Components/stats"
 import "./images/logo-ironhack.png"
 import About from "./Components/About"
 import Home from "./Components/Home"
-import Archive from "./Components/Archive"
-import Stats from "./Components/stats"
+import Archive from './Components/Archive'
+import axios from "axios";
+import Signup from "./Components/Signup"
 
 
 export default class App extends Component {
@@ -54,6 +55,8 @@ export default class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/home" component={Home} />
           <Route path="/content/signup" component={Signup} />
+          <Route path="/stats" component={Stats} />
+          <Route path="/archive" component={Archive} />
         </Switch>
       </div>
     );
