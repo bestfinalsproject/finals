@@ -18,48 +18,48 @@ class Login extends Component {
     return (
       <div>
         <form onSubmit={this.passLoginInfo}>
-          <div class="form-label-group">
+          <div className="form-label-group">
             <input
               type="email"
               id="inputEmail"
-              class="form-control"
+              className="form-control"
               placeholder="username"
               required
-              autofocus
+              autoFocus
             />
-            <label for="inputEmail">Email address</label>
+            <label htmlFor="inputEmail">Email address</label>
           </div>
 
-          <div class="form-label-group">
+          <div className="form-label-group">
             <input
               type="password"
               id="inputPassword"
-              class="form-control"
+              className="form-control"
               placeholder="Password"
               required
             />
-            <label for="inputPassword">Password</label>
+            <label htmlFor="inputPassword">Password</label>
           </div>
 
-          <div class="custom-control custom-checkbox mb-3">
+          <div className="custom-control custom-checkbox mb-3">
             <input
               type="checkbox"
-              class="custom-control-input"
+              className="custom-control-input"
               id="customCheck1"
             />
-            <label class="custom-control-label" for="customCheck1">
+            <label className="custom-control-label" htmlFor="customCheck1">
               Remember password
             </label>
           </div>
           <button
-            class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+            className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
             type="submit"
             onClick={this.notify}
           >
             Sign in
           </button>
-          <div class="text-center">
-            <a class="small" href="#home">
+          <div className="text-center">
+            <a className="small" href="#home">
               Forgot password?
             </a>
           </div>

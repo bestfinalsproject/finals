@@ -9,8 +9,8 @@ export default class About extends Component {
             <h1 className="font-weight-light text-white">Meet the Team</h1>
           </div>
         </header>
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             <div className="col-xl-3 col-md-6 mb-4">
               <div className="card border-0 shadow">
                 <img

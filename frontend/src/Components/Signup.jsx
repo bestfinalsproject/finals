@@ -33,7 +33,7 @@ class Signup extends Component {
 
   goToLogin = () => {
     const { history } = this.props;
-    history.push("/home");
+    history.push("/");
   };
 
   submitInput = async e => {

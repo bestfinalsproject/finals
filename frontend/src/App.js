@@ -45,7 +45,17 @@ export default class App extends Component {
         <NavBar />
         <Switch>
           <Route path="/about" component={About} />
-          <Route path="/home" component={Home} />
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Home
+                {...props}
+                user={this.state.currentlyLoggedInUser}
+                login={this.login}
+              />
+            )}
+          />
           <Route path="/content/signup" component={Signup} />
         </Switch>
       </div>
