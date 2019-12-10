@@ -1,16 +1,29 @@
 import React, { Component } from "react";
 
 class Login extends Component {
+  state = {
+    username: "",
+    password: ""
+  };
+  updateInput = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  passLoginInfo = e => {
+    e.preventDefault();
+    console.log(this);
+    this.props.login(this.state.username, this.state.password);
+  };
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.passLoginInfo}>
           <div class="form-label-group">
             <input
               type="email"
               id="inputEmail"
               class="form-control"
-              placeholder="Email address"
+              placeholder="username"
               required
               autofocus
             />

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./home.css";
 import { Login } from ".";
+import { Link } from "react-router-dom";
 
 export default class Landing extends Component {
   notify = () => {
@@ -22,9 +23,9 @@ export default class Landing extends Component {
                     <Login />
                     <div class="text-center">
                       New to The Forge ?
-                      <a class="medium" href="signup">
-                        Sign Up
-                      </a>
+                      <button>
+                        <Link to={"/content/signup"}>Signup</Link>
+                      </button>
                     </div>
                   </div>
                 </div>

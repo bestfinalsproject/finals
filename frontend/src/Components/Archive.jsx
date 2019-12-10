@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Archive extends Component {
-    render() {
-        return (
-            <div>
-                This is the Archive of people 
-            </div>
-        )
-    }
+  render() {
+    return <div>This is the Archive of people</div>;
+  }
 }

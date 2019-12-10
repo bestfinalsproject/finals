@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import "./images/logo-ironhack.png";
 import axios from "axios";
-import { About, Home, NavBar } from "./components";
+import { About, Home, NavBar, Signup } from "./components";
 
 export default class App extends Component {
   state = {
